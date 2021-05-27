@@ -2,8 +2,8 @@ import { Component, ViewChild } from '@angular/core'
 import { Observable } from 'rxjs'
 import { ApiService } from './api.service'
 import { Team } from './Models/team'
-import {MatPaginator, PageEvent} from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
+//import {MatPaginator, PageEvent} from '@angular/material/paginator';
+//import { MatTableDataSource } from '@angular/material/table';
 
 export interface PeriodicElement {
   name: string;
@@ -34,7 +34,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 
 export class AppComponent {
-  @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
+  //@ViewChild(MatPaginator) paginator: MatPaginator | undefined;
   title = 'full-sports-feed'
 
   // MatPaginator Inputs
@@ -50,7 +50,7 @@ export class AppComponent {
   dataSource: any | null
 
   // MatPaginator Output
-  pageEvent: PageEvent | undefined;
+  //pageEvent: PageEvent | undefined;
 
   constructor(private apiService: ApiService){}
 
@@ -59,7 +59,7 @@ export class AppComponent {
   }
 
   ngOnInit(){
-    this.dataSource = new MatTableDataSource(ELEMENT_DATA)
+    //this.dataSource = new MatTableDataSource(ELEMENT_DATA)
   }
 
   /*ngOnInit(){
